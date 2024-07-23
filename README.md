@@ -1,6 +1,10 @@
 # straycat-rs
  A Rust port of straycat, a WORLD-based UTAU resampler
 
+ ![version](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2FUtaUtaUtau%2Fstraycat-rs%2Fmaster%2FCargo.toml&query=%24.package.version&label=version&color=aliceblue&link=https%3A%2F%2Fgithub.com%2FUtaUtaUtau%2Fstraycat-rs%2Freleases%2Flatest)
+ ![build](https://github.com/UtaUtaUtau/straycat-rs/actions/workflows/build.yml/badge.svg)
+ ![test](https://github.com/UtaUtaUtau/straycat-rs/actions/workflows/test.yml/badge.svg)
+
 # How to use
  Download the [latest version](https://github.com/UtaUtaUtau/straycat-rs/releases/latest/download/straycat-rs.exe) of straycat-rs and use it like a regular UTAU resampler.
 # How to compile
