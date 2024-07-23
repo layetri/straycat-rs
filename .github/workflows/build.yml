@@ -1,16 +1,17 @@
 name: 'build'
 
 on:
-  push:
-    branches:
-      - master
-      - ci-dev
+  workflow_run:
+    workflows: ["test"]
+    types:
+      - completed
 
 env:
   WINSDK_VERSION: 22621
 
 jobs:
   build-straycat:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
 
@@ -34,6 +35,7 @@ jobs:
           path: target/release/straycat-rs.exe
   
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
 
